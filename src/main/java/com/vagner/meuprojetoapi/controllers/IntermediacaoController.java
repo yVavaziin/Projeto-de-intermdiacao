@@ -1,6 +1,6 @@
 package com.vagner.meuprojetoapi.controllers;
 // Define o pacote onde essa classe está (organização do projeto)
-
+import java.util.List;
 import org.springframework.web.bind.annotation.*;
 // Importa várias anotações usadas para criar APIs (rotas)
 
@@ -76,5 +76,19 @@ public class IntermediacaoController {
             return ResponseEntity.status(401).body("E-mail ou senha incorretos");
             // Retorna erro 401 (não autorizado) com mensagem
         }
+    }
+    // ============================
+    // ROTA DE LISTAGEM TOTAL
+    // ============================
+
+    @GetMapping("/todos")
+    // Define uma rota GET em: /api/usuarios/todos
+    public ResponseEntity<List<Usuario>> listarTodos() {
+
+        // Chama o service para buscar a lista completa no banco
+        List<Usuario> lista = usuarioService.buscarTodos();
+
+        // Retorna status 200 (OK) com a lista de usuários
+        return ResponseEntity.ok(lista);
     }
 }

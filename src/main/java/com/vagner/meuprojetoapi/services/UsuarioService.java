@@ -31,4 +31,8 @@ public class UsuarioService {
         }
         return null; // Retorna null se o login falhar
     }
+    public List<Usuario> buscarTodos() {
+        // O repository já tem o método findAll() por padrão do JPA
+        return usuarioRepository.findAll();
+    }
 }

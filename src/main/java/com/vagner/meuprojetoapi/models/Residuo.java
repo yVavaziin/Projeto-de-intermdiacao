@@ -30,4 +30,7 @@ public class Residuo {
 
     public LocalDateTime getDataColeta() { return dataColeta; }
     public void setDataColeta(LocalDateTime dataColeta) { this.dataColeta = dataColeta; }
+    @ManyToOne
+    @JoinColumn(name = "usuario_id") // Cria uma chave estrangeira no banco
+    private Usuario usuario;
 }

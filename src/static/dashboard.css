@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background: #1e3799;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+}
+
+.menu {
+    width: 200px;
+    background: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu button {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.conteudo {
+    flex: 1;
+    padding: 20px;
+}
+
+.secao {
+    display: none;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 300px;
+}

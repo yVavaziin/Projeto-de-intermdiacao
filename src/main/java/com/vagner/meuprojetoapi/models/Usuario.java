@@ -1,6 +1,7 @@
 package com.vagner.meuprojetoapi.models;
 // Define o pacote onde essa classe está (organização do projeto)
-
+import java.util.List;
+import java.util.ArrayList;
 import jakarta.persistence.*;
 // Importa as anotações do JPA (usadas para conectar com o banco)
 
@@ -25,6 +26,17 @@ public class Usuario {
     @Column(nullable = false)
     // Campo obrigatório (não pode ser nulo)
     private String nome;
+
+    @Enumerated(EnumType.STRING)
+    private TipoUsuario tipo;
+
+    public TipoUsuario getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoUsuario tipo) {
+        this.tipo = tipo;
+    }
 
     @Column(nullable = false, unique = true)
     // Campo obrigatório e único (não pode repetir email)
@@ -129,4 +141,10 @@ public class Usuario {
         return Objects.hash(id);
         // Gera um código baseado no ID (usado em listas, sets, etc)
     }
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Residuo> residuos = new ArrayList<>();
+
+    public List<Residuo> getResiduos() { return residuos; }
+    public void setResiduos(List<Residuo> residuos) { this.residuos = residuos; }
+
 }

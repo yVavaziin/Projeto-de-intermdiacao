@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - EcoConnect</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h2>EcoConnect Dashboard</h2>
+    <div id="usuarioNome"></div>
+</header>
+
+<div class="container">
+
+    <!-- MENU -->
+    <aside class="menu">
+        <button onclick="mostrarSecao('empresa')">Empresa</button>
+        <button onclick="mostrarSecao('residuo')">Resíduos</button>
+        <button onclick="mostrarSecao('maquina')">Máquinas</button>
+        <button onclick="logout()">Sair</button>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="conteudo">
+
+        <!-- EMPRESA -->
+        <section id="empresa" class="secao">
+            <h3>Cadastro de Empresa / Restaurante</h3>
+
+            <input type="text" id="nomeEmpresa" placeholder="Nome da empresa">
+            <input type="text" id="local" placeholder="Localização">
+            <input type="text" id="atuacao" placeholder="Como atua">
+            <input type="text" id="tipoEmpresa" placeholder="Tipo (restaurante, coleta...)">
+
+            <button onclick="cadastrarEmpresa()">Cadastrar</button>
+        </section>
+
+        <!-- RESÍDUO -->
+        <section id="residuo" class="secao">
+            <h3>Cadastro de Resíduos</h3>
+
+            <input type="text" id="tipoResiduo" placeholder="Tipo de resíduo">
+            <input type="text" id="quantidade" placeholder="Quantidade">
+
+            <button onclick="cadastrarResiduo()">Cadastrar</button>
+        </section>
+
+        <!-- MÁQUINA -->
+        <section id="maquina" class="secao">
+            <h3>Cadastro de Máquinas</h3>
+
+            <input type="text" id="nomeMaquina" placeholder="Nome da máquina">
+            <input type="text" id="descricaoMaquina" placeholder="Descrição">
+
+            <button onclick="cadastrarMaquina()">Cadastrar</button>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
