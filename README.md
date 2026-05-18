@@ -13,6 +13,8 @@ API desenvolvida em Java com Spring Boot para gerenciamento de logística revers
 - CSS
 - JavaScript
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/efd136bb-6aad-4d4f-be67-c7f9ae101ccd" />
+
 ---
 
 ## 📌 Funcionalidades
